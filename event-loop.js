@@ -1,8 +1,9 @@
 const fs = require("fs");
 
-const a = 100;
-
-setImmediate(() => console.log("setImmediate"));
+setImmediate(() => {
+  process.nextTick(() => console.log("set next tikc"));
+  console.log("setImmediate");
+});
 
 Promise.resolve("Promise resolved").then(console.log);
 
@@ -12,12 +13,11 @@ fs.readFile("./file.txt", "utf-8", () => {
 
 setTimeout(() => {
   console.log("set Timeout");
-}, 1000);
+}, 0);
 
-process.nextTick(() => console.log("Process next tick"));
-function App() {
-  console.log("a =", a);
-}
+process.nextTick(() => {
+  process.nextTick(() => console.log("inner nexttick"));
+  console.log("Process next tick");
+});
 
-App();
 console.log("last Line of the code.");
