@@ -8,7 +8,6 @@ setImmediate(() => {
 Promise.resolve("Promise resolved").then(console.log);
 
 fs.readFile("./file.txt", "utf-8", () => {
-  console.log("file read");
   Promise.resolve("2nd Promise").then(console.log);
 });
 
