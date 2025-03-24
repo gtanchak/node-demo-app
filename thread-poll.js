@@ -8,12 +8,14 @@ crypto.pbkdf2("password", "salt", 5000000, 50, "sha512", (e) => {
 crypto.pbkdf2("password", "salt", 5000000, 50, "sha512", (e) => {
   console.log("key is generate");
 });
+
 crypto.pbkdf2("password", "salt", 5000000, 50, "sha512", (e) => {
   console.log("key is generate");
 });
 crypto.pbkdf2("password", "salt", 5000000, 50, "sha512", (e) => {
   console.log("key is generate");
 });
+
 crypto.pbkdf2("password", "salt", 5000000, 50, "sha512", (e) => {
   console.log("key is generate");
 });
